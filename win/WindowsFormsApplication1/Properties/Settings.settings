@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SCBypass.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="username" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="pauseBetween" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="retryFailPageContains" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UA-2152484-1</Value>
+    </Setting>
+    <Setting Name="retryPage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">http://www.something.com</Value>
+    </Setting>
+    <Setting Name="needLoginCheck" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Valparaiso University</Value>
+    </Setting>
+    <Setting Name="userAgent" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Mozilla/5.0 (X11; U; Linux x86_64; en_US; rv:1.9.2.8) Gecko/20100723 Ubuntu/10.04 (lucid) Firefox/3.6.8</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
