@@ -16,3 +16,17 @@ C:\Users\Bobby\Documents\Visual Studio 2010\Projects\WindowsFormsApplication1\Wi
 C:\Users\Bobby Graese\Documents\Visual Studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\bin\Release\SCBypass.exe.config
 C:\Users\Bobby Graese\Documents\Visual Studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Release\SCBypass.exe
 C:\Users\Bobby Graese\Documents\Visual Studio 2010\Projects\WindowsFormsApplication1\WindowsFormsApplication1\obj\x86\Release\SCBypass.pdb
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\bin\Release\SCBypass.exe.config
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.exe
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.pdb
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.csprojResolveAssemblyReference.cache
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.Form1.resources
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.FormSettings.resources
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.Properties.Resources.resources
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.csproj.GenerateResource.Cache
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\bin\Release\SCBypass.exe.manifest
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\bin\Release\SCBypass.application
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\bin\Release\SCBypass.exe
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\bin\Release\SCBypass.pdb
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.exe.manifest
+C:\Users\Bobby\Documents\GitHub\Safe-Connect-Bypass\win\WindowsFormsApplication1\obj\x86\Release\SCBypass.application
