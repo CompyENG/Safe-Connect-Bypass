@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Net;
 using System.IO;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
@@ -20,6 +21,8 @@ namespace SCBypass
         private ThreadDelegate2 threadDelegate2;
         public Properties.Settings settings;
         private Boolean keyHandled;
+
+        static byte[] additionalEntropy = { 1, 27, 39, 40, 58, 67, 79, 94, 107, 111, 112, 118, 156, 180, 187, 194, 203, 231, 240, 250 };
         //private const string USER_AGENT = "Mozilla/5.0 (X11; U; Linux x86_64; en_US; rv:1.9.2.8) Gecko/20100723 Ubuntu/10.04 (lucid) Firefox/3.6.8";
         public Form1()
         {
@@ -27,7 +30,25 @@ namespace SCBypass
             settings.Reload();
             InitializeComponent();
             edtUsername.Text = settings.username;
-            edtPassword.Text = settings.password;
+            //edtPassword.Text = settings.password;
+            if (settings.password != "")
+            {
+                UTF8Encoding encoding = new UTF8Encoding();
+                byte[] encPwd = Convert.FromBase64String(settings.password);
+                //byte[] encPwd = encoding.GetBytes(settings.password);
+                byte[] decPwd = {};
+                try
+                {
+                    decPwd = ProtectedData.Unprotect(encPwd, additionalEntropy, DataProtectionScope.CurrentUser);
+                }
+                catch (CryptographicException e)
+                {
+                    MessageBox.Show("Error decrypting user password. Defaulting to blank password.");
+                    //decPwd = encoding.GetBytes("");
+                    //decPwd = {};
+                }
+                edtPassword.Text = encoding.GetString(decPwd);
+            }
             threadDelegate1 = new ThreadDelegate(updateProgress);
             threadDelegate2 = new ThreadDelegate2(updateStatus);
             keyHandled = false;
@@ -66,7 +87,28 @@ namespace SCBypass
         private void btnSaveCred_Click(object sender, EventArgs e)
         {
             settings.username = edtUsername.Text;
-            settings.password = edtPassword.Text;
+            // Encrypt password
+            if (edtPassword.Text != "")
+            {
+                UTF8Encoding encoding = new UTF8Encoding();
+                byte[] pwdBytes = encoding.GetBytes(edtPassword.Text);
+                byte[] encPwd = {};
+                try
+                {
+                    encPwd = ProtectedData.Protect(pwdBytes, additionalEntropy, DataProtectionScope.CurrentUser);
+                }
+                catch (CryptographicException ex)
+                {
+                    MessageBox.Show("Error encrypting password. Not saving password.");
+                    //encPwd = encoding.GetBytes("");
+                }
+                settings.password = Convert.ToBase64String(encPwd);
+            }
+            else
+            {
+                settings.password = "";
+            }
+            //settings.password = edtPassword.Text;
             settings.Save();
         }
 
